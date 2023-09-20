@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="assets/css/styles2.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="signup">
+            <h1>Sign Up</h1>
+            <form class="signup-form" action="your_signup_processing_script.php" method="post"
+                onsubmit="return validateForm()">
+                <fieldset>
+                    <label for="Name"> Name</label>
+                    <input type="text" id="Name" name="Name" placeholder=" Name" required>
+                </fieldset>
+                <fieldset>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </fieldset>
+                <fieldset>
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Password" required>
+                </fieldset>
+                <button type="submit">Sign Up Now</button>
+                <p>Already have an account? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var firstName = document.getElementById("firstName").value;
+            var lastName = document.getElementById("lastName").value;
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("password").value;
+
+            // Simple validation examples, you can customize these as needed
+            if (firstName === "") {
+                alert("First Name must be filled out");
+                return false;
+            }
+
+            if (lastName === "") {
+                alert("Last Name must be filled out");
+                return false;
+            }
+
+            if (email === "") {
+                alert("Email must be filled out");
+                return false;
+            }
+
+            if (password === "") {
+                alert("Password must be filled out");
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+
+</html>
